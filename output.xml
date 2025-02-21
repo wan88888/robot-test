@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.9.21 on linux)" generated="2025-02-21T02:37:52.609176" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/runner/work/robot-test/robot-test/Tests">
+<suite id="s1-s1" name="Api" source="/home/runner/work/robot-test/robot-test/Tests/api">
+<suite id="s1-s1-s1" name="Test Jsonplaceholder" source="/home/runner/work/robot-test/robot-test/Tests/api/test_jsonplaceholder.robot">
+<kw name="Create Session For JSONPlaceholder" owner="JSONPlaceholderKeywords" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:52.716532" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>jsonplaceholder</arg>
+<arg>${BASE_URL}</arg>
+<arg>verify=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-02-21T02:37:52.716285" elapsed="0.000462"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:52.715620" elapsed="0.001228"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Test Get All Posts" line="6">
+<kw name="Get All Posts" owner="JSONPlaceholderKeywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:52.782974" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-21T02:37:52.783157" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 21 Feb 2025 02:37:52 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738831071&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KMc1yWQmCQDD9lXZPrx4nzDepGOqLPeZmBpBA%2BI8M2o%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1738831071&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KMc1yWQmCQDD9lXZPrx4nzDepGOqLPeZmBpBA%2BI8M2o%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1738831117', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"6b80-Ybsq/K6GwwqrYkAsFxqDXGC7DoM"', 'Content-Encoding': 'gzip', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '6350', 'Server': 'cloudflare', 'CF-RAY': '91535b64b917237a-SJC', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=1747&amp;min_rtt=1745&amp;rtt_var=659&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=783&amp;delivery_rate=1617214&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=76ad198f74470f4d&amp;ts=32&amp;x=0"'} 
+ body=[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "nesciunt quas odio",
+    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+  },
+  {
+    "userId": 1,
+    "id": 6,
+    "title": "dolorem eum magni eos aperiam quia",
+    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+  },
+  {
+    "userId": 1,
+    "id": 7,
+    "title": "magnam facilis autem",
+    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+  },
+  {
+    "userId": 1,
+    "id": 8,
+    "title": "dolorem dolore est ipsam",
+    "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+  },
+  {
+    "userId": 1,
+    "id": 9,
+    "title": "nesciunt iure omnis dolorem tempora et accusantium",
+    "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+  },
+  {
+    "userId": 1,
+    "id": 10,
+    "title": "optio molestias id quia eum",
+    "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+  },
+  {
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+  },
+  {
+    "userId": 2,
+    "id": 12,
+    "title": "in quibusdam tempore odit est dolorem",
+    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+  },
+  {
+    "userId": 2,
+    "id": 13,
+    "title": "dolorum ut in voluptas mollitia et saepe quo animi",
+    "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+  },
+  {
+    "userId": 2,
+    "id": 14,
+    "title": "voluptatem eligendi optio",
+    "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+  },
+  {
+    "userId": 2,
+    "id": 15,
+    "title": "eveniet quod temporibus",
+    "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+  },
+  {
+    "userId": 2,
+    "id": 16,
+    "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+    "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+  },
+  {
+    "userId": 2,
+    "id": 17,
+    "title": "fugit voluptas sed molestias voluptatem provident",
+    "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+  },
+  {
+    "userId": 2,
+    "id": 18,
+    "title": "voluptate et itaque vero tempora molestiae",
+    "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+  },
+  {
+    "userId": 2,
+    "id": 19,
+    "title": "adipisci placeat illum aut reiciendis qui",
+    "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+  },
+  {
+    "userId": 2,
+    "id": 20,
+    "title": "doloribus ad provident suscipit at",
+    "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+  },
+  {
+    "userId": 3,
+    "id": 21,
+    "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+    "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+  },
+  {
+    "userId": 3,
+    "id": 22,
+    "title": "dolor sint quo a velit explicabo quia nam",
+    "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+  },
+  {
+    "userId": 3,
+    "id": 23,
+    "title": "maxime id vitae nihil numquam",
+    "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+  },
+  {
+    "userId": 3,
+    "id": 24,
+    "title": "autem hic labore sunt dolores incidunt",
+    "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+  },
+  {
+    "userId": 3,
+    "id": 25,
+    "title": "rem alias distinctio quo quis",
+    "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+  },
+  {
+    "userId": 3,
+    "id": 26,
+    "title": "est et quae odit qui non",
+    "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+  },
+  {
+    "userId": 3,
+    "id": 27,
+    "title": "quasi id et eos tenetur aut quo autem",
+    "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+  },
+  {
+    "userId": 3,
+    "id": 28,
+    "title": "delectus ullam et corporis nulla voluptas sequi",
+    "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+  },
+  {
+    "userId": 3,
+    "id": 29,
+    "title": "iusto eius quod necessitatibus culpa ea",
+    "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+  },
+  {
+    "userId": 3,
+    "id": 30,
+    "title": "a quo magni similique perferendis",
+    "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+  },
+  {
+    "userId": 4,
+    "id": 31,
+    "title": "ullam ut quidem id aut vel consequuntur",
+    "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+  },
+  {
+    "userId": 4,
+    "id": 32,
+    "title": "doloremque illum aliquid sunt",
+    "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+  },
+  {
+    "userId": 4,
+    "id": 33,
+    "title": "qui explicabo molestiae dolorem",
+    "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+  },
+  {
+    "userId": 4,
+    "id": 34,
+    "title": "magnam ut rerum iure",
+    "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+  },
+  {
+    "userId": 4,
+    "id": 35,
+    "title": "id nihil consequatur molestias animi provident",
+    "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+  },
+  {
+    "userId": 4,
+    "id": 36,
+    "title": "fuga nam accusamus voluptas reiciendis itaque",
+    "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+  },
+  {
+    "userId": 4,
+    "id": 37,
+    "title": "provident vel ut sit ratione est... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2025-02-21T02:37:52.783455" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.717586" elapsed="0.065905"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.783700" elapsed="0.000315"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-21T02:37:52.784086" elapsed="0.000058"/>
+</return>
+<msg time="2025-02-21T02:37:52.784322" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<status status="PASS" start="2025-02-21T02:37:52.717344" elapsed="0.067008"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2025-02-21T02:37:52.785075" level="INFO">Length is 100.</msg>
+<arg>${response.json()}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.784463" elapsed="0.000672"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:52.716916" elapsed="0.068375"/>
+</test>
+<test id="s1-s1-s1-t2" name="Test Get Single Post" line="10">
+<kw name="Get Post By Id" owner="JSONPlaceholderKeywords">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:52.802773" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-02-21T02:37:52.802896" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 21 Feb 2025 02:37:52 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738187864&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FY2HtMyRO1tsfd2mUk3Fm%2ByLyGXdOnSO6G3jtlGF2lw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1738187864&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FY2HtMyRO1tsfd2mUk3Fm%2ByLyGXdOnSO6G3jtlGF2lw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1738187866', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'expires': '-1', 'X-Content-Type-Options': 'nosniff', 'etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Via': '1.1 vegur', 'Age': '16755', 'cf-cache-status': 'HIT', 'Server': 'cloudflare', 'CF-RAY': '91535b64e974237a-SJC', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=1733&amp;min_rtt=1605&amp;rtt_var=266&amp;sent=13&amp;recv=11&amp;lost=0&amp;retrans=0&amp;sent_bytes=11919&amp;recv_bytes=971&amp;delivery_rate=6484359&amp;cwnd=257&amp;unsent_bytes=0&amp;cid=76ad198f74470f4d&amp;ts=52&amp;x=0"'} 
+ body={
+  "userId": 1,
+  "id": 1,
+  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+} 
+ </msg>
+<msg time="2025-02-21T02:37:52.803058" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts/${post_id}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.786476" elapsed="0.016614"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.803321" elapsed="0.000268"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-21T02:37:52.803650" elapsed="0.000051"/>
+</return>
+<msg time="2025-02-21T02:37:52.803864" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>1</arg>
+<status status="PASS" start="2025-02-21T02:37:52.786030" elapsed="0.017862"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-21T02:37:52.804542" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.json()}[id]</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.804021" elapsed="0.000583"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:52.785553" elapsed="0.019187"/>
+</test>
+<test id="s1-s1-s1-t3" name="Test Create New Post" line="14">
+<kw name="Create New Post" owner="JSONPlaceholderKeywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-21T02:37:52.806297" level="INFO">${data} = {'title': 'Test Title', 'body': 'Test Body', 'userId': '1'}</msg>
+<var>${data}</var>
+<arg>title=${title}</arg>
+<arg>body=${body}</arg>
+<arg>userId=${user_id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.805833" elapsed="0.000495"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:53.014738" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '59', 'Content-Type': 'application/json'} 
+ body=b'{"title": "Test Title", "body": "Test Body", "userId": "1"}' 
+ </msg>
+<msg time="2025-02-21T02:37:53.014877" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=201, reason=Created 
+ headers={'Date': 'Fri, 21 Feb 2025 02:37:53 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '80', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1740105472&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=MiW6XatsvewD2EMmOo2PKMBxtBnkCYJ%2F%2Fx3dsX%2FFD08%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1740105472&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=MiW6XatsvewD2EMmOo2PKMBxtBnkCYJ%2F%2Fx3dsX%2FFD08%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1740105503', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'https://jsonplaceholder.typicode.com/posts/101', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"50-JsNi0ENZJeaAfpDFJhjV06qiaD4"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '91535b6509ac237a-SJC', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=2424&amp;min_rtt=1588&amp;rtt_var=1574&amp;sent=17&amp;recv=14&amp;lost=0&amp;retrans=0&amp;sent_bytes=13548&amp;recv_bytes=1291&amp;delivery_rate=6484359&amp;cwnd=257&amp;unsent_bytes=0&amp;cid=76ad198f74470f4d&amp;ts=264&amp;x=0"'} 
+ body={
+  "title": "Test Title",
+  "body": "Test Body",
+  "userId": "1",
+  "id": 101
+} 
+ </msg>
+<msg time="2025-02-21T02:37:53.015063" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-21T02:37:52.806448" elapsed="0.208648"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.015368" elapsed="0.000280"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-21T02:37:53.015710" elapsed="0.000047"/>
+</return>
+<msg time="2025-02-21T02:37:53.015908" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>Test Title</arg>
+<arg>Test Body</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-02-21T02:37:52.805478" elapsed="0.210457"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.json()}[title]</arg>
+<arg>Test Title</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.016053" elapsed="0.000550"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.json()}[body]</arg>
+<arg>Test Body</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.016718" elapsed="0.000430"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:52.804995" elapsed="0.212307"/>
+</test>
+<test id="s1-s1-s1-t4" name="Test Update Post" line="19">
+<kw name="Update Post" owner="JSONPlaceholderKeywords">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-02-21T02:37:53.018855" level="INFO">${data} = {'title': 'Updated Title', 'body': 'Updated Body', 'userId': '1', 'id': '1'}</msg>
+<var>${data}</var>
+<arg>title=${title}</arg>
+<arg>body=${body}</arg>
+<arg>userId=${user_id}</arg>
+<arg>id=${post_id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.018484" elapsed="0.000400"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:53.230649" level="INFO">PUT Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '76', 'Content-Type': 'application/json'} 
+ body=b'{"title": "Updated Title", "body": "Updated Body", "userId": "1", "id": "1"}' 
+ </msg>
+<msg time="2025-02-21T02:37:53.230770" level="INFO">PUT Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 21 Feb 2025 02:37:53 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1740105473&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5lTzENbNgSlqY3dAZyebI8bg8EAXVBbnKo3usyZs%2FbQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1740105473&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5lTzENbNgSlqY3dAZyebI8bg8EAXVBbnKo3usyZs%2FbQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1740105503', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"54-1biZA5hCvDrdXgoBMjZRp9n/Zuc"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '91535b666bd2237a-SJC', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=2332&amp;min_rtt=1588&amp;rtt_var=1366&amp;sent=20&amp;recv=17&amp;lost=0&amp;retrans=0&amp;sent_bytes=15109&amp;recv_bytes=1629&amp;delivery_rate=6484359&amp;cwnd=257&amp;unsent_bytes=0&amp;cid=76ad198f74470f4d&amp;ts=480&amp;x=0"'} 
+ body={
+  "title": "Updated Title",
+  "body": "Updated Body",
+  "userId": "1",
+  "id": 1
+} 
+ </msg>
+<msg time="2025-02-21T02:37:53.230950" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts/${post_id}</arg>
+<arg>json=${data}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.019005" elapsed="0.211977"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.231194" elapsed="0.000313"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-21T02:37:53.231577" elapsed="0.000048"/>
+</return>
+<msg time="2025-02-21T02:37:53.231776" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>1</arg>
+<arg>Updated Title</arg>
+<arg>Updated Body</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-02-21T02:37:53.018019" elapsed="0.213785"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.json()}[title]</arg>
+<arg>Updated Title</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.231924" elapsed="0.000532"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${response.json()}[body]</arg>
+<arg>Updated Body</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.232571" elapsed="0.000430"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:53.017550" elapsed="0.215583"/>
+</test>
+<test id="s1-s1-s1-t5" name="Test Delete Post" line="24">
+<kw name="Delete Post" owner="JSONPlaceholderKeywords">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-02-21T02:37:53.318056" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-02-21T02:37:53.318194" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 21 Feb 2025 02:37:53 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1740105473&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5lTzENbNgSlqY3dAZyebI8bg8EAXVBbnKo3usyZs%2FbQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1740105473&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=5lTzENbNgSlqY3dAZyebI8bg8EAXVBbnKo3usyZs%2FbQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1740105503', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '91535b67be24237a-SJC', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=2877&amp;min_rtt=1588&amp;rtt_var=2124&amp;sent=24&amp;recv=19&amp;lost=0&amp;retrans=0&amp;sent_bytes=16600&amp;recv_bytes=1839&amp;delivery_rate=6484359&amp;cwnd=257&amp;unsent_bytes=0&amp;cid=76ad198f74470f4d&amp;ts=567&amp;x=0"'} 
+ body={} 
+ </msg>
+<msg time="2025-02-21T02:37:53.318381" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts/${post_id}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.234132" elapsed="0.084282"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.318659" elapsed="0.000262"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-02-21T02:37:53.318979" elapsed="0.000046"/>
+</return>
+<msg time="2025-02-21T02:37:53.319174" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>1</arg>
+<status status="PASS" start="2025-02-21T02:37:53.233860" elapsed="0.085342"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-02-21T02:37:53.319772" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.319333" elapsed="0.000498"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:53.233408" elapsed="0.086554"/>
+</test>
+<status status="PASS" start="2025-02-21T02:37:52.630843" elapsed="0.689670"/>
+</suite>
+<status status="PASS" start="2025-02-21T02:37:52.629779" elapsed="0.691430"/>
+</suite>
+<suite id="s1-s2" name="Web" source="/home/runner/work/robot-test/robot-test/Tests/web">
+<suite id="s1-s2-s1" name="Test Login" source="/home/runner/work/robot-test/robot-test/Tests/web/test_login.robot">
+<test id="s1-s2-s1-t1" name="Test Successful Login" line="7">
+<kw name="Open Login Page" owner="LoginPage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:53.446300" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument('--headless');add_argument('--disable-gpu')</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-21T02:37:53.445995" elapsed="1.749211"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.195968" elapsed="0.015311"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:53.445376" elapsed="1.766076"/>
+</kw>
+<kw name="Input Username" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:55.213112" level="INFO">Typing text 'tomsmith' into text field 'id=username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.212388" elapsed="0.092022"/>
+</kw>
+<arg>tomsmith</arg>
+<status status="PASS" start="2025-02-21T02:37:55.211845" elapsed="0.092756"/>
+</kw>
+<kw name="Input Password" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:55.305583" level="INFO">Typing text 'SuperSecretPassword!' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.305282" elapsed="0.064718"/>
+</kw>
+<arg>SuperSecretPassword!</arg>
+<status status="PASS" start="2025-02-21T02:37:55.304864" elapsed="0.065313"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:55.371122" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.370846" elapsed="0.272019"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:55.370482" elapsed="0.272607"/>
+</kw>
+<kw name="Verify Login Success" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SUCCESS_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.644003" elapsed="0.021722"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:55.682347" level="INFO">Element 'css=.flash.success' contains text 'You logged into a secure area!'.</msg>
+<arg>${SUCCESS_MESSAGE}</arg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.666016" elapsed="0.016501"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:55.643463" elapsed="0.039220"/>
+</kw>
+<kw name="Close Browser Page" owner="LoginPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.683481" elapsed="0.059743"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:55.683080" elapsed="0.060337"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:53.444706" elapsed="2.298796"/>
+</test>
+<test id="s1-s2-s1-t2" name="Test Failed Login" line="13">
+<kw name="Open Login Page" owner="LoginPage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:55.745116" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument('--headless');add_argument('--disable-gpu')</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-21T02:37:55.744817" elapsed="1.377540"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.123135" elapsed="0.015235"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:55.744468" elapsed="1.394161"/>
+</kw>
+<kw name="Input Username" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:57.139949" level="INFO">Typing text 'invalid_user' into text field 'id=username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.139578" elapsed="0.078225"/>
+</kw>
+<arg>invalid_user</arg>
+<status status="PASS" start="2025-02-21T02:37:57.139063" elapsed="0.078919"/>
+</kw>
+<kw name="Input Password" owner="LoginPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:57.218958" level="INFO">Typing text 'invalid_password' into text field 'id=password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.218662" elapsed="0.058772"/>
+</kw>
+<arg>invalid_password</arg>
+<status status="PASS" start="2025-02-21T02:37:57.218236" elapsed="0.059372"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:57.278841" level="INFO">Clicking button 'css=button[type='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.278265" elapsed="0.264021"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:57.277869" elapsed="0.264596"/>
+</kw>
+<kw name="Verify Login Failed" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.543103" elapsed="0.018322"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-21T02:37:57.577569" level="INFO">Element 'css=.flash.error' contains text 'Your username is invalid!'.</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.561747" elapsed="0.015957"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:57.542730" elapsed="0.035113"/>
+</kw>
+<kw name="Close Browser Page" owner="LoginPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-21T02:37:57.578867" elapsed="0.059687"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:57.578342" elapsed="0.060381"/>
+</kw>
+<status status="PASS" start="2025-02-21T02:37:55.743937" elapsed="1.894871"/>
+</test>
+<status status="PASS" start="2025-02-21T02:37:53.322891" elapsed="4.316524"/>
+</suite>
+<status status="PASS" start="2025-02-21T02:37:53.321682" elapsed="4.318491"/>
+</suite>
+<status status="PASS" start="2025-02-21T02:37:52.610116" elapsed="5.030662"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="7" fail="0" skip="0">Tests</stat>
+<stat name="Api" id="s1-s1" pass="5" fail="0" skip="0">Tests.Api</stat>
+<stat name="Test Jsonplaceholder" id="s1-s1-s1" pass="5" fail="0" skip="0">Tests.Api.Test Jsonplaceholder</stat>
+<stat name="Web" id="s1-s2" pass="2" fail="0" skip="0">Tests.Web</stat>
+<stat name="Test Login" id="s1-s2-s1" pass="2" fail="0" skip="0">Tests.Web.Test Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-21T02:37:52.633726" level="WARN">Error in file '/home/runner/work/robot-test/robot-test/Resources/api/JSONPlaceholderKeywords.robot' on line 15: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-02-21T02:37:52.633929" level="WARN">Error in file '/home/runner/work/robot-test/robot-test/Resources/api/JSONPlaceholderKeywords.robot' on line 21: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-02-21T02:37:52.634123" level="WARN">Error in file '/home/runner/work/robot-test/robot-test/Resources/api/JSONPlaceholderKeywords.robot' on line 28: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-02-21T02:37:52.634380" level="WARN">Error in file '/home/runner/work/robot-test/robot-test/Resources/api/JSONPlaceholderKeywords.robot' on line 35: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-02-21T02:37:52.634553" level="WARN">Error in file '/home/runner/work/robot-test/robot-test/Resources/api/JSONPlaceholderKeywords.robot' on line 41: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
