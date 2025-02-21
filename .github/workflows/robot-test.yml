@@ -38,8 +38,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Robot Framework tests
+      id: robot_test
       run: |
         robot -d Results Tests
+      continue-on-error: true
 
     - name: Upload test results
       if: always()
@@ -55,18 +57,26 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./Results
         keep_files: false
+        destination_dir: .
+        enable_jekyll: false
 
     - name: Send to Feishu
-      if: success()
+      if: always()
       uses: foxundermoon/feishu-action@v2
       with:
         url: ${{ secrets.FEISHU_WEBHOOK_URL }}
         msg_type: post
         content: |
           {"zh_cn": {
-            "title": "Robot Framework 测试报告",
+            "title": "Robot Framework 测试执行结果",
             "content": [
-              [{"tag":"text","text":"测试执行已完成，查看详细报告："},
-               {"tag":"a","text":"点击查看","href":"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html"}]
+              [{"tag":"text","text":"🤖 测试执行完成\n"}, 
+               {"tag":"text","text":"分支：${{ github.ref_name }}\n"}, 
+               {"tag":"text","text":"提交：${{ github.sha }}\n"},
+               {"tag":"text","text":"提交者：${{ github.actor }}\n"},
+               {"tag":"text","text":"状态：${{ steps.robot_test.outcome == 'success' && '✅ 成功' || '❌ 失败' }}\n"},
+               {"tag":"text","text":"测试报告："},
+               {"tag":"a","text":"点击查看","href":"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html"}],
+              [{"tag":"text","text":"\n如果测试失败，请检查以下可能的原因：\n1. 测试用例编写是否正确\n2. 测试环境是否正常\n3. 被测系统是否可访问"}]
             ]
           }}
